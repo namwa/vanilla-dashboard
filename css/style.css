@@ -1,0 +1,65 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  margin: 2rem 2rem;
+}
+
+:root {
+  --gap-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+  gap: var(--gap-size);
+}
+
+.column-main {
+  flex: 2;
+}
+
+.column-sidebar {
+  flex: 1;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+nav {
+  border: 1px solid brown;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  padding: 0.5rem;
+  list-style-type: none;
+  gap: var(--gap-size);
+}
+
+.nav > li {
+  display: block;
+  padding: 0.5em 1em;
+  background-color: burlywood;
+}
+
+.nav .logo {
+  background-color: unset;
+}
+
+.nav > .logo {
+  margin-inline-end: auto;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border: 1px solid black;
+}
