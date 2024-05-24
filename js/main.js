@@ -9,13 +9,16 @@ function createNavElement() {
 
   let menus = ["Logo", "Home", "Blog", "Pricing"]
 
-  // render list of menus
-  function renderList(elements) {
+  menus.forEach((menu, index) => {
     const li = document.createElement("li")
     li.setAttribute("contenteditable", "true")
     li.setAttribute("draggable", "true")
 
-    li.innerText = li.innerText + elements
+    li.innerText = menu
+
+    if (index === 0) {
+      li.classList.add("logo")
+    }
 
     li.addEventListener("dragstart", handleDragStart)
     li.addEventListener("dragover", handleDragOver)
@@ -23,14 +26,9 @@ function createNavElement() {
     li.addEventListener("dragend", handleDragEnd)
 
     ul.appendChild(li)
-  }
-
-  menus.forEach(renderList)
+  })
 
   nav.appendChild(ul)
-
-  let firstLi = ul.querySelector("li")
-  firstLi.classList.add("logo")
 
   return nav
 }
