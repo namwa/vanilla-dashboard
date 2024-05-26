@@ -1,6 +1,8 @@
 const addNavBtn = document.querySelector(".add-nav")
+const addBlockBtn = document.querySelector(".add-block")
 const columnMain = document.querySelector(".column-main")
 
+// create Nav bar
 function createNavElement() {
   const nav = document.createElement("nav")
   const ul = document.createElement("ul")
@@ -11,7 +13,6 @@ function createNavElement() {
 
   menus.forEach((menu, index) => {
     const li = document.createElement("li")
-    li.setAttribute("contenteditable", "true")
     li.setAttribute("draggable", "true")
 
     li.innerText = menu
@@ -22,6 +23,8 @@ function createNavElement() {
 
     li.addEventListener("dragstart", handleDragStart)
     li.addEventListener("dragover", handleDragOver)
+    li.addEventListener("dragenter",handleDragEnter)
+    li.addEventListener("dragleave", handleDragLeave)
     li.addEventListener("drop", handleDrop)
     li.addEventListener("dragend", handleDragEnd)
 
@@ -37,6 +40,8 @@ function handleDragStart(e) {
   e.target.classList.add("dragging")
   e.dataTransfer.effectAllowed = "move"
   e.dataTransfer.setData("text/html", e.target.innerHTML)
+
+  e.currentTarget.style.backgroundColor = "yellow"
 }
 
 function handleDragOver(e) {
@@ -45,7 +50,16 @@ function handleDragOver(e) {
   return false
 }
 
+function handleDragEnter(e) {
+  this.classList.add("over")
+}
+
+function handleDragLeave(e) {
+  this.classList.remove("over")
+}
+
 function handleDrop(e) {
+  e.stopPropagation()
   const draggingItem = document.querySelector(".dragging")
   if (draggingItem !== this) {
     draggingItem.innerHTML = this.innerHTML
@@ -56,9 +70,31 @@ function handleDrop(e) {
 
 function handleDragEnd(e) {
   this.classList.remove("dragging")
+  e.currentTarget.style.backgroundColor = ""
+
+  let menus = document.getElementsByTagName("li")
+  for (menu of menus) {
+    menu.classList.remove("over")
+  }
+}
+
+// create a block
+function createBlockElement() {
+  const block = document.createElement("div")
+  const textarea = document.createElement("textarea")
+
+  block.classList.add("block")
+  textarea.setAttribute("placeholder", "Enter you text here")
+  block.appendChild(textarea)
+  return block
 }
 
 addNavBtn.addEventListener("click", () => {
   const nav = createNavElement()
   columnMain.appendChild(nav)
+})
+
+addBlockBtn.addEventListener("click", () => {
+  const block = createBlockElement()
+  columnMain.appendChild(block)
 })
