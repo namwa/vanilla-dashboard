@@ -15,9 +15,119 @@
       <button type="button" class="add-block">Add block</button>
       <h2>All pages</h2>
       <button type="button">+ Add new Page</button>
+
+      <button type="button" class="add-comment">Add Comment</button>
     </div>
     <div class="column-main">
       <h2>Page builder</h2>
+
+      <section class="comment-section">
+        <div class="comment-add-box">
+          <textarea name="" id="" placeholder="Add a comment"></textarea>
+          <button type="button">Comment</button>
+        </div>
+
+        <div class="container">
+          <div class="comment__container opened">
+            <div class="comment__card">
+              <img src="./assets/avatar-woman.png" alt="">
+              <div>
+                <div class="comment__text">
+                  <div>
+                    <span><b>Cindy</b></span>
+                    <span>-</span>
+                    <span>22 Jun</span>
+                  </div>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et neque impedit, id repudiandae tempore iure possimus cumque voluptatem, exercitationem, vel dolor asperiores aperiam odit! Dolor, eos! Corporis omnis assumenda ipsam.</p>
+                </div>
+                <div class="comment__action">
+                  <button class="button-likes" data-count="11">
+                    <svg fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-width="1.4" d="m10.723 4.632.002-.002c.69-.691 1.61-1.1 2.58-1.154l.228-.006a3.958 3.958 0 0 1 2.79 6.758l-6.29 6.29a.044.044 0 0 1-.063 0l-6.29-6.29A3.959 3.959 0 0 1 9.277 4.63l.227.227.493.494.496-.492.229-.227Z"></path></svg>
+                    11
+                  </button>
+                  <div class="divider-right"></div>
+                  <button type="button" class="reply">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1st level nested comment -->
+            <div class="comment__container opened">
+              <div class="comment__card">
+                <img src="./assets/avatar-man.png" alt="">
+                <div>
+                  <div class="comment__text">
+                    <div>
+                      <span><b>William</b></span>
+                      <span>-</span>
+                      <span>22 Jun</span>
+                    </div>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et neque impedit, id repudiandae tempore iure possimus cumque voluptatem, exercitationem, vel dolor asperiores aperiam odit! Dolor, eos! Corporis omnis assumenda ipsam.</p>
+                  </div>
+                  <div class="comment__action">
+                    <button class="button-likes" data-count="11">
+                      <svg fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-width="1.4" d="m10.723 4.632.002-.002c.69-.691 1.61-1.1 2.58-1.154l.228-.006a3.958 3.958 0 0 1 2.79 6.758l-6.29 6.29a.044.044 0 0 1-.063 0l-6.29-6.29A3.959 3.959 0 0 1 9.277 4.63l.227.227.493.494.496-.492.229-.227Z"></path></svg>
+                      11
+                    </button>
+                    <div class="divider-right"></div>
+                    <button type="button" class="reply">Reply</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2nd level nested comment -->
+              <div class="comment__container opened">
+                <div class="comment__card">
+                  <img src="./assets/avatar-woman.png" alt="">
+                  <div>
+                    <div class="comment__text">
+                      <div>
+                        <span><b>Cindy</b></span>
+                        <span>-</span>
+                        <span>22 Jun</span>
+                      </div>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et neque impedit, id repudiandae tempore iure possimus cumque voluptatem, exercitationem, vel dolor asperiores aperiam odit! Dolor, eos! Corporis omnis assumenda ipsam.</p>
+                    </div>
+                    <div class="comment__action">
+                      <button class="button-likes" data-count="11">
+                        <svg fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-width="1.4" d="m10.723 4.632.002-.002c.69-.691 1.61-1.1 2.58-1.154l.228-.006a3.958 3.958 0 0 1 2.79 6.758l-6.29 6.29a.044.044 0 0 1-.063 0l-6.29-6.29A3.959 3.959 0 0 1 9.277 4.63l.227.227.493.494.496-.492.229-.227Z"></path></svg>
+                        11
+                      </button>
+                      <div class="divider-right"></div>
+                      <button type="button" class="reply">Reply</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1st level nested comment -->
+            <div class="comment__container opened">
+              <div class="comment__card">
+                <img src="./assets/avatar-man.png" alt="">
+                <div>
+                  <div class="comment__text">
+                    <div>
+                      <span><b>William</b></span>
+                      <span>-</span>
+                      <span>22 Jun</span>
+                    </div>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et neque impedit, id repudiandae tempore iure possimus cumque voluptatem, exercitationem, vel dolor asperiores aperiam odit! Dolor, eos! Corporis omnis assumenda ipsam.</p>
+                  </div>
+                  <div class="comment__action">
+                    <button class="button-likes" data-count="11">
+                      <svg fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-width="1.4" d="m10.723 4.632.002-.002c.69-.691 1.61-1.1 2.58-1.154l.228-.006a3.958 3.958 0 0 1 2.79 6.758l-6.29 6.29a.044.044 0 0 1-.063 0l-6.29-6.29A3.959 3.959 0 0 1 9.277 4.63l.227.227.493.494.496-.492.229-.227Z"></path></svg>
+                      11
+                    </button>
+                    <div class="divider-right"></div>
+                    <button type="button" class="reply">Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 </body>
