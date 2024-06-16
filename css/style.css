@@ -175,3 +175,7 @@ nav {
   background: none;
   cursor: pointer;
 }
+
+.comment-reply-box {
+  margin-left: 3rem;
+}
